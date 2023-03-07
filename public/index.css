@@ -1,0 +1,176 @@
+:root {
+  --primary-color: whitesmoke;
+}
+
+html,
+body {
+  font-family: Helvetica, sans-serif;
+  font-size: 16px;
+  margin: 0;
+  height: 100%;
+  background-image: linear-gradient(#2980b9, #6dd5fa);
+}
+
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+.header a {
+  font-size: 18px;
+  color: var(--primary-color);
+  text-decoration: none;
+  padding: 0 10px 0 10px;
+  display: flex;
+  align-items: center;
+}
+
+.header a:hover {
+  background-color: var(--primary-color);
+  color: #095487;
+  text-decoration: none;
+}
+
+.header a.active {
+  font-weight: bold;
+}
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #095487;
+  height: 70px;
+}
+
+main a {
+  color: #095487;
+}
+
+
+main {
+  overflow-y: auto;
+  margin-top: 20px;
+  color: #095487;
+  font-size: 1.3em;
+  text-align: justify;
+  padding-bottom: 18.5rem;
+  padding: 37px 60px;
+}
+
+
+#root {
+  display: grid;
+  grid-template-rows: 95px auto 125px;
+  height: 100%;
+  width: 100%;
+}
+
+footer {
+  margin-top: 60px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 18.5rem;
+}
+
+button {
+  border: solid #095487;
+  background-color: #095487;
+  border-radius: 30px;
+  color: var(--primary-color);
+  font-size: 16px;
+  padding: 9px 36px;
+  height: fit-content;
+  cursor: pointer;
+}
+
+.search-button {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  margin-left: 10px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
+}
+
+ul a {
+  color: #095487;
+  text-decoration: none;
+}
+
+ul a:hover {
+  text-decoration: underline;
+}
+
+p {
+  line-height: 33px;
+}
+
+p a {
+  color: var(--primary-color);
+  color: #095487;
+}
+
+p:not(:last-of-type) {
+  margin-bottom: 40px;
+}
+
+.article-title {
+  margin-bottom: 15px;
+}
+
+.article-title~p {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+h1 {
+  font-size: 30px;
+  color: var(--primary-color);
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
+}
+
+label input {
+  width: 334px;
+}
+
+input {
+  font-size: 16px;
+  padding: 8px;
+  border: 1px solid #979797;
+  border-radius: 3px;
+}
+
+label>div {
+  display: flex;
+  column-gap: 8px;
+}
+
+.logout {
+  margin-left: auto;
+  padding: 0;
+
+}
+
+h2 {
+  font-size: 18px;
+  margin-top: 18px;
+  color: whitesmoke;
+  font-weight: lighter;
+  margin-top: 60px;
+}
