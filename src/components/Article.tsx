@@ -2,7 +2,7 @@ import { useSelector } from 'react-redux';
 import { selectArticles } from '../features/articles/articlesSlice';
 import { useParams, Link } from 'react-router-dom';
 import { IArticle } from '../interfaces/IArticle';
-/* import ReactMarkdown from 'react-markdown'; */
+import ReactMarkdown from 'react-markdown';
 
 export default function Article() {
   const articles: IArticle = useSelector(selectArticles)
@@ -13,10 +13,9 @@ export default function Article() {
     <main className='article-container'>
       <h1 className='article-title'>{article.title}</h1>
       <p>By <Link to={`/authors/${article.author}`}>{article.author}</Link></p>
-      {/*       <ReactMarkdown>
+      {<ReactMarkdown>
         {article.body}
-      </ReactMarkdown> */}
-      {article.body}
+      </ReactMarkdown>}
     </main>
   ) : <p> No article found with that title... </p>
 }

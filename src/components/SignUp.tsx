@@ -9,10 +9,12 @@ export default function SignUp() {
 
   const navigate = useNavigate()
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement> ) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    dispatch(signUp({ username: username }));
-    navigate("/profile")
+    if (username.trim()) {
+      dispatch(signUp({ username: username }));
+      navigate("/profile")
+    }
   }
 
   return (

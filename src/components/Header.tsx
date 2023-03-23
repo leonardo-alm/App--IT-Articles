@@ -21,7 +21,7 @@ export default function Header() {
         currentUser.username
           ? <>
             <NavLink to="/profile">Profile</ NavLink>
-            <NavLink to="" onClick={handleLogout} >Log Out</NavLink>
+            <NavLink to="" onClick={handleLogout}>Log Out</NavLink>
           </>
           : <NavLink to="/sign-up">Sign Up</ NavLink>
       }

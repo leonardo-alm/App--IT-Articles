@@ -7,16 +7,15 @@ import Category from "../components/Category";
 import Author from "../components/Author";
 import Profile from "../components/Profile";
 import EditProfileForm from "../components/EditProfileForm";
-
-import { Route, Routes, BrowserRouter as Router } from 'react-router-dom';
-
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
+import { Route, Routes, BrowserRouter as Router } from 'react-router-dom';
+
 function App() {
   return (
-    <div id="page-container">
-      <Router>
+    <Router>
+      <div id="content-wrap">
         <Header />
         <Routes>
           <Route path="/about" element={<About />} />
@@ -31,9 +30,9 @@ function App() {
             <Route path="edit" element={<EditProfileForm />} />
           </Route>
         </Routes>
-        <Footer />
-      </Router>
-    </div>
+      </div>
+      <Footer />
+    </Router>
   );
 }
 
